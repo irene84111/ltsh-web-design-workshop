@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>羅東高中網頁設計工作坊－CSS自學秘笈</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-33172.js"></script>
+	</head>
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">羅東高中網頁設計工作坊</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html" class="icon fa-home">｜首頁</a></li>
+											<li><a href="introduction.html" class="icon fa-flag">｜網頁設計是什麼</a></li>
+											<li><a href="html.html" class="icon fa-book">｜HTML自學秘笈</a></li>
+											<li><a href="css.html" class="icon fa-book">｜CSS自學秘笈</a></li>
+											<li><a href="environment.html" class="icon fa-question-circle ">｜環境安裝＆模版</a></li>
+											<li><a href="sharing.html" class="icon fa-bookmark">｜個人網頁特搜</a></li>
+											<li><a href="selflearning.html" class="icon fa-paper-plane">｜網頁設計自學之路</a></li>
+											<li><a href="show.html" class="icon fa-magic">｜學員成果發表</a></li>
+											<li><a href="photo.html" class="icon fa-photo">｜活動照片</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header style="background-image: none; background-color: #DDC74F;">
+							<h2 style="color: #2E3842">CSS自學秘笈</h2>
+							<h3 style="color: #A49037">Cascading Style Sheets</h3>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+
+								<h2>CSS是什麼？</h2>
+								<p>CSS是一種「樣式語言」，用來描述網頁元素（HTML元素）的各種外觀樣式，例如：顏色、大小、排版、或簡單的動畫效果。未經CSS修飾過的HTML，就像純文字文件一樣，幾乎沒有色彩、沒有排版、沒有尺寸變化的，這種網站沒有人會喜歡看，所以我們需要加入CSS語法，讓醜醜單調的網頁增添更多色彩與視覺設計元素。</p>
+
+
+								<b>其語法組成元素必須要有三部分：</b>
+								<ul style="margin-top:10px">
+									<li>選擇器(selector) => 選擇哪些元素要受套用這個樣式（例如：標題字？圖片？或文章段落）</li>
+									<li>屬性(property) => 表示要針對哪些樣式做定義（例如：顏色？大小？或位置）</li>
+									<li>值(value) => 賦予所選屬性一個值（例如：紅色？20pt？或置中）</li>
+								</ul>
+
+								<hr />
+
+								<h2>說這麼多五四三，到底CSS要怎麼寫</h2>
+								<p>如上所示，完整的CSS語法必須包含選擇器、屬性與值，用法如下：</p>
+								<img src="images/css01.png" alt="" style="width:85%">
+
+								<p>這段語法是在寫，將所有&lt;p&gt;元素的「內文顏色」設定為「#000（黑色）」</p>
+
+								<hr />
+
+								<h2>選擇器(selector)</h2>
+								<p>CSS選擇器有很多種，每種選擇器有他應用的地方，常見的有element 選擇器、class 選擇器、id 選擇器</p>
+								<ul class="actions fit">
+									<li><a href="#element" class="button fit">Element Selector</a></li>
+									<li><a href="#class" class="button fit">Class Selector</a></li>
+									<li><a href="#id" class="button fit">Id Selector</a></li>
+								</ul>
+
+								<!-- Element -->
+								<br id="element"><br>
+								<div class="block">
+									<h3>Element Selector</h3>
+									<p>使用方法：假設要選擇所有的 &lt;p&gt;，則寫 p {屬性: 值}</p>
+									<ul style="margin-top:-25px">
+										<li>例1：p { color: red} ，此語法代表：選擇所有的 p 元素，並將其內文顏色設定為紅色。</li>
+										<li>例2：button { background-color: orange }，此語法代表：選擇所有button元素，並將其「背景顏色」設為橘色。</li>
+									</ul>
+								</div>
+								
+								<!-- Class -->
+								<br id="class"><br>
+								<div class="block">
+									<h3>Class Selector</h3>
+									<p>有的時候我們不會想要一次抓取全部的元素，例如：我有十個 &lt;button&gt;，但我只想選擇其中幾個來做樣式設定，這時候就不能使用 element selector（因為會抓到全部的 &lt;button&gt;），取而代之的是 class selector。 <br><br>
+										Class 的概念類似一種「類別」，我們必須先在 HTML 裡定義哪些 Element 屬於哪個 Class，才能使用 Class Selector 選取這個類別的所有元素。</p>
+									<ul style="margin-top:-25px">
+										<li>例如：&lt;p class="apple"&gt;....&lt;/p&gt;，以上就是定義這個 &lt;p&gt; 元素是屬於「apple」的個 class 的。接著我們才可以使用 class selector 來選擇他。</li>
+										<li>例如：.apple { color: red }，此語法代表：選擇所有 class 為 apple 的元素，將其內文設為紅色。</li>
+									</ul>	
+								</div>
+
+								<!-- ID -->
+								<br id="id"><br>
+								<div class="block">
+									<h3>Id Selector</h3>
+									<p>這個選擇器相對比較少使用，但在開發 Javascript 時會比較常出現，也不難理解。 <br><br>
+										Id Selector 的用法跟第二個提到的 class selector 頗為相似，需要先在HTML裡定義某某元素的 Id 是什麼，才能使用，唯一的不同是，同一個 Id 只能被一個元素所擁有。 <br>
+										HTML該這樣寫：&lt;h1 id="title"&gt;...&lt;/h1&gt;，以上就是定義這個 &lt;h1&gt;元素的 Id 為「title」，（於是其他元素的Id不可以是title了）。</p>
+									<ul style="margin-top:-25px">
+										<li>例如： #title { color: red }，此語法代表：選擇這個id為title的元素，並將其內文設為紅色。</li>
+									</ul>	
+								</div>
+								
+								<hr />
+
+								<h2>屬性 ( Proterty ) 與值 ( Value )</h2>
+								<p>每種元素有不同屬性可以使用，有些屬性是共通的、有些是自己特有的。<br>例如：&lt;p&gt; 元素有 font-size 屬性（即字體大小），但 &lt;img&gt;（即圖片）就不會有這個屬性。比較共通的屬性如：margin-top（與上方物件的距離）等等。</p>
+								
+								<h3>常用的屬性列表與其值</h3>
+								<ul class="actions fit">
+									<li><a href="#color" class="button special fit">顏色</a></li>
+									<li><a href="#size" class="button special fit">尺寸</a></li>
+								</ul>
+								<ul class="actions fit">
+									<li><a href="#text" class="button special fit">文字</a></li>
+									<li><a href="#layout" class="button special fit">排版</a></li>
+								</ul>
+
+								<!-- Color -->
+								<br id="color"><br>
+								<div class="block">
+									<h3>顏色相關：</h3>
+									<ul style="margin-top:10px">
+										<li>color 內文顏色 ｜ 色名、RGB色碼、HSL色碼 //color: #333</li>
+										<li>background-color 背景顏色 ｜ （同上）</li>
+										<li>border-color 邊框顏色 ｜ （同上）</li>
+										<li>opactiy 不透明度 ｜ 0.0 至 1.0 區間 //opacity: 0.5</li>
+									</ul>
+								</div>
+
+								<!-- Size -->
+								<br id="size"><br>
+								<div class="block">
+									<h3>尺寸相關：（一般使用數字 ＋ "px" ）</h3>
+									<ul style="margin-top:10px">
+										<li>font-size 內文字體大小//font-size: 25px</li>
+										<li>width 元素寬度</li>
+										<li>height 元素高度</li>
+										<li>border-width 邊框寬度</li>
+									</ul>
+								</div>
+
+								<!-- Text -->
+								<br id="text"><br>
+								<div class="block">
+									<h3>文字相關：</h3>	
+									<ul style="margin-top:10px">
+										<li>font-size</li>
+										<li>color</li>
+										<li>letter-spacing 字距</li>
+										<li>line-height 行距</li>
+										<li>text-align 對齊 ｜center（置中）、left（置左）、（置右）</li>
+										<li>text-decoration  文字裝飾 ｜ none（無裝飾）、underline（加底線）、line-through（加刪除線）</li>
+									</ul>
+								</div>
+
+								<!-- Layout -->
+								<br id="layout"><br>
+								<div class="block">
+									<h3>排版相關：</h3>
+									<img src="images/css03.png" alt="" style="width:60%">
+									<ul style="margin-top:30px">
+										<li>padding-top 元素內距（上方）、padding-right、padding-left、padding-bottom</li>
+										<li>margin-top元素外距（上方）、margin-right、margin-left、margin-bottom</li>
+										<li>display 顯示方式 ｜ block、inline</li>
+										<li>float ｜right、left</li>
+									</ul>
+								</div>
+
+							</div>
+						</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; LTSH 2015 Web Workshop</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
